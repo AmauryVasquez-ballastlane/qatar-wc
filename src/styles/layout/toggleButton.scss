@@ -1,0 +1,15 @@
+@import '_button';
+@import '../_animation';
+
+button.menuButton {
+  @include toggleButton();
+  @include fadeIn();
+
+  div {
+    background: var(--white);
+  }
+}
+
+button.disabled {
+  opacity: 0;
+}

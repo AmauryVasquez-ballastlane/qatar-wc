@@ -1,0 +1,24 @@
+@mixin toggleButton() {
+  height: 50px;
+  width: 50px;
+  border-radius: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 12px;
+  background: transparent;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+
+  div {
+    height: 2px;
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  &:hover {
+    cursor: pointer;
+    transition: 0.2s;
+    background: rgba(0, 0, 0, 0.2);
+  }
+}

@@ -1,0 +1,68 @@
+@import '_button';
+
+@keyframes rightToLeft {
+  from {
+    right: -300px;
+  }
+}
+
+@keyframes leftToRight {
+  from {
+    right: 0;
+  }
+  to {
+    right: -300px;
+  }
+}
+
+div.sider {
+  animation: 0.4s rightToLeft ease;
+  width: 300px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  * {
+    padding: 5px 10px;
+  }
+}
+
+div.closeSider {
+  animation: 0.4s leftToRight ease;
+}
+
+div.top {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+button.closeButton {
+  @include toggleButton();
+  align-self: flex-start;
+
+  svg {
+    font-size: 40px;
+    color: var(--white);
+  }
+}
+
+a.siderHomeLink {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: 600;
+}
+
+nav.navigationMenu {
+  height: 100%;
+  width: 100%;
+}
